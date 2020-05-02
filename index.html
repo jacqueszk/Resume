@@ -1,2 +1,88 @@
+---
+name: Jacques
+surname: Swart
+position: "Data and Systems Engineer"
+address: "Gauteng, South Africa"
+phone: +27 (0) 73 390 888
+email: "swartpj11@gmail.com"
+github: jacqueszk
+linkedin: jacquesswart11
+date: "`r format(Sys.time(), '%B %Y')`"
+output: vitae::moderncv
+---
 
-ddd
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+```
+
+
+```{r echo=TRUE}
+# Include image
+knitr::include_graphics("Capture2.JPG")
+```
+
+# Knowledge areas
+
+ * Business Improvement
+ * Data Science
+ * Systems Engineering
+ * Mining Technology
+ * Underground & Surface Mining
+
+# Education
+
+```{r}
+library(tibble)
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where,
+  "Bachelor of Engineering (Industrial)", "2010-13", "Stellenbosch University", "Stellenbosch, South Africa",
+   "Master of Engineering (Industrial)", "2014-15", "Stellenbosch University", "Stellenbosch, South Africa",
+  "Master's Exchange Programme", "2014-15", "Ghent University", "Ghent, Belgium",
+  "Bachelor of Accounting Science (Accounting and Finance)", "2016-20", "University of South Africa", "Pretoria, South Africa"
+) %>% 
+  detailed_entries(Degree, Year, Institution, Where)
+```
+
+# Experience
+
+```{r}
+library(tibble)
+tribble(
+  ~ Position, ~ Year, ~ Company,
+  "Intern", "Mar. 2015- Jan 2016", "Hunting Dragons Consulting",
+   "Industrial Engineer", "Feb. 2016 - Dec. 2017", "Eskom", 
+  "Industrial Engineer", "Jan. 2018 - Jun. 2020", "Petra Diamonds", 
+  "Data and Systems Engineer", "Jul. 2020 - Present", "Petra Diamonds"
+ ) %>% 
+  detailed_entries(Position, Year, Company)
+```
+ 
+  
+# Certifications
+
+```{r}
+library(tibble)
+tribble(
+  ~ Certificate, ~year, ~ Organisation,
+  "Leading continuous improvement programme","", "INSEAD Executive Education and Partners in Performance", 
+   "TOGAF 9 Certified","", "The Open Group", 
+  "Machine Learning Scientist with R","", "DataCamp",
+  "Systems Engineering","", "Project Performance International (PPI)",
+ ) %>% 
+  detailed_entries(Certificate, year,Organisation)
+```
+
+# Toolset
+
+```{r}
+library(tibble)
+tribble(
+  ~ Tool, ~ Level,
+  "RStudio, SQL, Management Studio (SSMS), Analysis Services (SSAS), Power BI, Excel, Visual Basic for Applications (VBA), SQL Server Machine Learning Services & GitHub", "Advanced",
+   "Python, Visual Studio Code, Access, Flow, Hive, Spark, Tensorflow, Django, IIoT, Cloud Computing (Azure & AWS) & ERPs", "Familiar with"
+ ) %>% 
+  detailed_entries(Tool, Level)
+```
+
+
